@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Triangle",
+    name: "SwiftUITriangle",
     platforms: [
         .iOS(.v13),
         .macOS(.v10_15),
