@@ -40,8 +40,15 @@ public struct Triangle: Shape {
         self.angleB = { _ in angleB }
     }
     
+    /// `Angle` for lower-left corner of the triangle.
     public var angleA: AngleCalc?
+    /// `Angle` for lower-right corner of the triangle.
     public var angleB: AngleCalc?
+    /// `Angle` for the upper corner of the triangle.
+    ///
+    /// Instead of being a stored property like ``angleA`` or ``angleB``, `angleC` computed on the fly,
+    /// as the three angles of a triangle always sum to 180 degrees. By eliminating one more parameter from
+    /// being editable, it removes more of the possibility of errors.
     public var angleC: AngleCalc? {
         guard let angleA, let angleB else { return nil }
         return { r in .degrees(180) - angleA(r) - angleB(r) }
