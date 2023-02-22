@@ -135,7 +135,7 @@ extension Triangle {
     ///
     /// The angles will be calculated automatically, filling the frame of the shape, and allowing for the top vertex's provided placement.
     /// - Parameter topVertexPlacement: The relative horizontal placement of the top vertex of the triangle.
-    /// > Important: Value should be in the range of `0.0`-`1.0`.
+    /// > Important: `topVertexPlacement` should be in the range of `0.0`-`1.0`.
     public init(topVertexPlacement: CGFloat) {
         let placement = max(0, min(1, topVertexPlacement))
         
